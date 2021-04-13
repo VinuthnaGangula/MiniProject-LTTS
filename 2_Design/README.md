@@ -5,7 +5,7 @@
 #### Component Diagram :
 ![HLD_Component_Diagram](HLD_Component.png)
 
-#### Usecase Diagram** :
+#### Usecase Diagram :
 ![HLD_Usecase_Diagram](HLD_Usecase.png)
 
 ### Low Level Design
