@@ -8,16 +8,21 @@ int main(){
     char name[100];
     int age;
     FILE *fptr;
-    fptr = fopen("intro.txt", "r");
+    fptr = fopen("src/intro.txt", "r");
+    if(fptr==NULL){
+        printf("error");
+        return NULL_FILE_PTR;
+    }
     while(fgets(buff,50,fptr)){
-        printf("%s",buff);  
+        puts(buff);  
     }
     printf("Press any number between 0 and 9 to display the Menu.....");
-    while(c<=9 && c>=0){
-        c=getchar();
+    while(c!=1){
+       scanf("%d",&c);
     }
-    //clearScreen();
-    system("cls");
+    
+    printf("\e[1;1H\e[2J");
+    //system("clear");
     //Display Menu...
         do{
             printf("Choose an option to continue...\n1.View Daemons List\n2.View a Daemon Details\n3.Take quiz\n4.Exit\n");
@@ -25,20 +30,23 @@ int main(){
             switch(ch){
             case 1 :
             {
+                printf("\e[1;1H\e[2J");
                 //viewDaemonList();
                 break;
             }
             case 2 :
             {
+                printf("\e[1;1H\e[2J");
                 //viewDaemonList();
                 printf("Enter Daemon Number\n");
                 scanf("%d",&num);
-                //clearScreen();
+                printf("\e[1;1H\e[2J");
                 //viewDaemonDetails(num);
                 break;
             }
             case 3 :
             {
+                printf("\e[1;1H\e[2J");
                 printf("Enter your Name : ");
                 scanf("%s", name);
                 printf("Enter your age : ");
@@ -49,8 +57,8 @@ int main(){
             }
             case 4 :
             {
-                //clearScreen();
-                system("cls");
+                printf("\e[1;1H\e[2J");
+                printf("\e[1;1H\e[2J");
                 printf("Thank you!\n");
                 break;
             }
