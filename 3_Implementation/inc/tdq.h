@@ -18,9 +18,7 @@
      */
     typedef enum error{
         SUCCESS,
-        CANT_OPEN_FILE,
         NULL_FILE_PTR,
-        FAILURE
     }error_t;
 
     /**
@@ -32,36 +30,36 @@
         char d_name[50];
         char d_detail[200];
     }daemon;
-    daemon daemons[20];
+
+    daemon* daemons;
 
 /**
  * @brief 
  * 
- * @return error_t 
  */
-error_t populateStruct();
+void fileToStruct();
 
 /**
  * @brief 
  * 
- * @return error_t 
  */
-error_t viewDaemonList();
+void viewDaemonList();
 
 /**
  * @brief 
  * 
  * @param dnum 
- * @return error_t 
  */
-error_t viewDaemonDetails(int dnum);
+void viewDaemonDetails(int dnum);
 
 /**
  * @brief 
  * 
- * @return char* 
+ * @param name 
+ * @param age 
+ * @return error_t 
  */
-char* takeQuiz();
+error_t takeQuiz(char* name, int age);
 
 /**
  * @brief 
@@ -69,8 +67,7 @@ char* takeQuiz();
  * @param name 
  * @param age 
  * @param result 
- * @return error_t 
  */
-error_t displayResult(char* name, int age, char* result);
+void displayResult(char* name, int age, char* result);
 
 #endif

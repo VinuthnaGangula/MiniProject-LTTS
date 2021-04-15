@@ -1,7 +1,8 @@
 #include<stdio.h>
+#include<string.h>
 #include "tdq.h"
 
-char* takeQuiz(){
+error_t takeQuiz(char* name, int age){
     char result[30];
     FILE *fptr=NULL;
     fptr=fopen("quiz.txt", "r");
@@ -72,5 +73,6 @@ char* takeQuiz(){
                 }
             }
         }
-return result;
+        displayResult(name, age, result);
+return SUCCESS;
 }

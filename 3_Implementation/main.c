@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h>
 #include "tdq.h"
 
 int main(){
@@ -13,15 +14,16 @@ int main(){
         printf("error");
         return NULL_FILE_PTR;
     }
-    while(fgets(buff,50,fptr)){
+    printf("\n");
+    while(fgets(buff,250,fptr)){
         puts(buff);  
     }
     printf("\n");
-    printf("Press 1 to display the Menu.....");
+    printf("Press 1 to display the Menu.....\n");
     while(c!=1){
        scanf("%d",&c);
     }
-    
+    fileToStruct();
     printf("\e[1;1H\e[2J");
         do{
             printf("Choose an option to continue...\n1.View Daemons List\n2.View a Daemon Details\n3.Take quiz\n4.Exit\n");
@@ -50,13 +52,14 @@ int main(){
                 scanf("%s", name);
                 printf("Enter your age : ");
                 scanf("%d", &age);
-                if(age>18){
-                    printf("Sorry %s! A Daemon settles and stays in one form only after adolescence...\n I'll probably make a better one by the time you're 18! Wink!\n", name);
+                if(age<18){
+                    printf("Sorry %s! A Daemon settles and stays in one form only after adolescence...\nI'll probably make a better one by the time you're 18! Wink!\n", name);
                 }
-                char* result=(char*)malloc(30);
-                result=takeQuiz();
-                displayResult(name,age,result);
-                free(result);
+                else{
+                    if(takeQuiz(name, age)!=SUCCESS){
+                        return NULL_FILE_PTR;
+                    }
+                }
                 break;
             }
             case 4 :

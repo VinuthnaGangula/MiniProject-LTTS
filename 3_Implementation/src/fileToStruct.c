@@ -1,15 +1,18 @@
 #include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
 #include "tdq.h"
 
-error_t populateStruct(){
+void fileToStruct(){
     FILE *fp=NULL;
-    if(fp==NULL){
-        return NULL_FILE_PTR;
+    int num;
+    char name[30], detail[100];
+    daemons=(daemon*)malloc(sizeof(daemon)*8);
+    for(int i=0;i<8;i++){
+        fscanf(fp,"%d\t%s\t%s", &num, name, detail);
+        daemons[i].d_num=num;
+        strcpy(daemons[i].d_name, name);
+        strcpy(daemons[i].d_detail, detail);
     }
-    int i=0;
-    while(fscanf(fp, "%d,%[^,],%[^,]\n", &(daemons[i].d_num), daemons[i].d_name, daemons[i].d_detail)!=EOF){
-        i++;
-    }
-    return SUCCESS;
     fclose(fp);
 }

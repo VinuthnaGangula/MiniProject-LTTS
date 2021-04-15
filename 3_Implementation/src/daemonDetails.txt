@@ -1,3 +1,8 @@
-1,Dog,It is guardian. They are kind and beautifull creatures on the planet.
-2,Cat,They are mysterious and are the rulers.
-3,Butterfly,They are symbol of freedom and beauty. They are one of the wonderful creatures.
+1        Dog        Extrovert-Music-Night Person
+2        Cat        Introvert-Books-Night Person
+3        Leopard        Extrovert-Books-Night Person
+4        Eagle        Introvert-Books-Morning Person
+5        Dolphin        Extrovert-Music-MorningPerson
+6        Rabbit        Introvert-Music-Morning Person
+7        Snake        Introvert-Music-Night Person
+8        Butterfly        Extrovert-Books-Morning Person

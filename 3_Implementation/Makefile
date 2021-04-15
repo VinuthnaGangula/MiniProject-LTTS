@@ -6,7 +6,7 @@ BUILD_DIR = Build
 
 INC = -I inc -I unity
 
-SRC = src/daemonList.c src/daemonDetails.c src/fileToStruct.c
+SRC = src/daemonList.c src/daemonDetails.c src/fileToStruct.c src/displayResult.c src/takeQuiz.c
 
 TEST = test/test_fun.c unity/unity.c
 
@@ -18,14 +18,14 @@ else
 	ifeq ($(shell uname), Linux)
 		RM = rm -rf
 		FixPath = $1
-		EXEC = out
+			EXEC = out
 	endif
 endif
 
 .PHONY: all test run clean
 
 all: $(BUILD_DIR)
-	gcc main.c $(SRC) $(INC) -o $(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC))
+	gcc -g main.c $(SRC) $(INC) -o $(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC))
 
 test: $(SRC) $(TEST)
 	gcc $^  $(INC) -o $(call FixPath, $(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
@@ -36,6 +36,11 @@ run: all
 
 $(BUILD_DIR):
 	mkdir $(BUILD_DIR)
+
+coverage: $(PROJ_NAME)
+	gcc -fprofile-arcs -ftest-coverage $(SRC) $(TEST) $(INC) -o $(call FixPath, $(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
+	$(call FixPath, $(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
+	gcov -a $(SRC)
 
 clean:
 	$(RM) $(call FixPath, $(BUILD_DIR)/*)
