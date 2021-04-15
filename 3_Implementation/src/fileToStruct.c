@@ -1,8 +1,8 @@
 #include<stdio.h>
 #include "tdq.h"
 
-FILE *fp=NULL;
 error_t populateStruct(){
+    FILE *fp=NULL;
     if(fp==NULL){
         return NULL_FILE_PTR;
     }
@@ -11,5 +11,5 @@ error_t populateStruct(){
         i++;
     }
     return SUCCESS;
+    fclose(fp);
 }
-fclose(fp);
