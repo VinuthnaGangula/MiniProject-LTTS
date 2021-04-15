@@ -1,0 +1,6 @@
+Choose which describes you the best from the set of given options. 
+Press 1 for 1st option and 2 for second and then press enter till you for all four Questions.
+
+1. Introverted (or) Extroverted ?
+2. Books (or) Music ?
+3. Morning Person (or) Night Person ?

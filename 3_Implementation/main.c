@@ -16,14 +16,13 @@ int main(){
     while(fgets(buff,50,fptr)){
         puts(buff);  
     }
-    printf("Press any number between 0 and 9 to display the Menu.....");
+    printf("\n");
+    printf("Press 1 to display the Menu.....");
     while(c!=1){
        scanf("%d",&c);
     }
     
     printf("\e[1;1H\e[2J");
-    //system("clear");
-    //Display Menu...
         do{
             printf("Choose an option to continue...\n1.View Daemons List\n2.View a Daemon Details\n3.Take quiz\n4.Exit\n");
             scanf("%d", &ch);
@@ -31,17 +30,17 @@ int main(){
             case 1 :
             {
                 printf("\e[1;1H\e[2J");
-                //viewDaemonList();
+                viewDaemonList();
                 break;
             }
             case 2 :
             {
                 printf("\e[1;1H\e[2J");
-                //viewDaemonList();
+                viewDaemonList();
                 printf("Enter Daemon Number\n");
                 scanf("%d",&num);
                 printf("\e[1;1H\e[2J");
-                //viewDaemonDetails(num);
+                viewDaemonDetails(num);
                 break;
             }
             case 3 :
@@ -51,13 +50,17 @@ int main(){
                 scanf("%s", name);
                 printf("Enter your age : ");
                 scanf("%d", &age);
-                //takeQuiz();
-                //displayResult(name,age);
+                if(age>18){
+                    printf("Sorry %s! A Daemon settles and stays in one form only after adolescence...\n I'll probably make a better one by the time you're 18! Wink!\n", name);
+                }
+                char* result=(char*)malloc(30);
+                result=takeQuiz();
+                displayResult(name,age,result);
+                free(result);
                 break;
             }
             case 4 :
             {
-                printf("\e[1;1H\e[2J");
                 printf("\e[1;1H\e[2J");
                 printf("Thank you!\n");
                 break;

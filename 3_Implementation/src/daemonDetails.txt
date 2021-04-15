@@ -1,3 +1,3 @@
-1 Dog It is guardian. They are kind and beautifull creatures on the planet.
-2 Cat They are mysterious and are the rulers.
-3 Butterfly They are symbol of freedom and beauty. They are one of the wonderful creatures.
+1,Dog,It is guardian. They are kind and beautifull creatures on the planet.
+2,Cat,They are mysterious and are the rulers.
+3,Butterfly,They are symbol of freedom and beauty. They are one of the wonderful creatures.

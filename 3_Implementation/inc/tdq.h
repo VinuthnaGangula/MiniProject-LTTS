@@ -59,8 +59,18 @@ error_t viewDaemonDetails(int dnum);
 /**
  * @brief 
  * 
+ * @return char* 
+ */
+char* takeQuiz();
+
+/**
+ * @brief 
+ * 
+ * @param name 
+ * @param age 
+ * @param result 
  * @return error_t 
  */
-error_t takeQuiz();
+error_t displayResult(char* name, int age, char* result);
 
 #endif
