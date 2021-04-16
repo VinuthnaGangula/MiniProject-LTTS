@@ -2,8 +2,7 @@
 #include<string.h>
 #include "tdq.h"
 
-error_t takeQuiz(char* name, int age){
-    char result[30];
+error_t takeQuiz(char* name, int age, char* result){
     printf("Choose which describes you the best from the set of given options.\nPress 1 for 1st option and 2 for second and then press enter till you for all four Questions.");
     int arr[3];
     printf("\n1. Introverted (or) Extroverted ?\n");

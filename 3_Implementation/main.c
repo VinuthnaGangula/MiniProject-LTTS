@@ -42,11 +42,13 @@ int main(){
                 printf("Enter Daemon Number\n");
                 scanf("%d",&num);
                 printf("\e[1;1H\e[2J");
-                viewDaemonDetails(num);
+                char * result=viewDaemonDetails(num);
+                printf("%s\n", result);
                 break;
             }
             case 3 :
             {
+                char* result;
                 printf("\e[1;1H\e[2J");
                 printf("Enter your Name : ");
                 scanf("%s", name);
@@ -56,7 +58,7 @@ int main(){
                     printf("Sorry %s! A Daemon settles and stays in one form only after adolescence...\nI'll probably make a better one by the time you're 18! Wink!\n", name);
                 }
                 else{
-                    if(takeQuiz(name, age)!=SUCCESS){
+                    if(takeQuiz(name, age,&result)!=SUCCESS){
                         return NULL_FILE_PTR;
                     }
                 }

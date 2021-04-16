@@ -50,7 +50,7 @@ void viewDaemonList();
  * 
  * @param dnum 
  */
-void viewDaemonDetails(int dnum);
+char* viewDaemonDetails(int dnum);
 
 /**
  * @brief 
@@ -59,7 +59,7 @@ void viewDaemonDetails(int dnum);
  * @param age 
  * @return error_t 
  */
-error_t takeQuiz(char* name, int age);
+error_t takeQuiz(char* name, int age, char* result);
 
 /**
  * @brief 

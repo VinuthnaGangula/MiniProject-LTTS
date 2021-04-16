@@ -28,7 +28,7 @@ all: $(BUILD_DIR)
 	gcc -g main.c $(SRC) $(INC) -o $(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC))
 
 test: $(SRC) $(TEST)
-	gcc $^  $(INC) -o $(call FixPath, $(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
+	gcc $(SRC) $(TEST)  $(INC) -o $(call FixPath, $(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
 	$(call FixPath, $(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
 
 run: all
