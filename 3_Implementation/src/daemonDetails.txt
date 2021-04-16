@@ -1,8 +1,0 @@
-1        Dog        Extrovert-Music-Night Person
-2        Cat        Introvert-Books-Night Person
-3        Leopard        Extrovert-Books-Night Person
-4        Eagle        Introvert-Books-Morning Person
-5        Dolphin        Extrovert-Music-MorningPerson
-6        Rabbit        Introvert-Music-Morning Person
-7        Snake        Introvert-Music-Night Person
-8        Butterfly        Extrovert-Books-Morning Person

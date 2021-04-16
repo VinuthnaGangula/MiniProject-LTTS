@@ -31,7 +31,7 @@
         char d_detail[200];
     }daemon;
 
-    daemon* daemons;
+    daemon daemons[8];
 
 /**
  * @brief 
