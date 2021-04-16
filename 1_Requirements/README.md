@@ -14,17 +14,7 @@ The objective of this project is to introduce a fantasy concept and treat it to 
 - Created in 2003, The Daemon Page was the first website dedicated completely to the philosophy of daemons. May seem weird to have a page for a fantasy being and you can call it fun but deepdown, its one way of finding yourself.
 
 ### SWOT Analysis
-- **Strength** : 
-    1. Availabity of online resources.
-    2. Similar quiz implementations availability.
-- **Weakness** :
-    1. Study of diverse species.
-    2. Not easy or even impossible to conclude a person's character.
-- **Opportunity** :
-    1. Understand various phases of SDLC.
-    2. Lot of room for growth.
-- **Threat** :
-    1. Issues with working equipment.
+![SWOT_Analysis](SWOT.png)
 
 ### 4W's and 1H 
 
@@ -46,14 +36,19 @@ The objective of this project is to introduce a fantasy concept and treat it to 
 - Suggest a closely-related daemon for the person to analyze further.
 
 ### High Level Requirements
-* User shall be given a basic Introduction of the Daemon.
-* User shall be able to view list of Daemons.
-* User shall be able to view details(basic traits) of a Daemon.
+
+| ID | Description | Status |
+| --- | --- | --- |
+| 1 | User shall be given a basic Introduction of the Daemon. | Implemented |
+| 2 | User shall be able to view list of Daemons. | Implemented |
+| 3 | User shall be able to view details of a Daemon. | Implemented |
 
 ### Low Level requirements
-* User shall be asked to provide basic details like Name and Age.
-* If user is under 18(not an adult), he/she shall not be able to attempt the quiz.
-* User shall be able to choose a valid answer from the available options.
-* User shall be able to change the answer before submitting the question.
-* User shall be able to attempt multiple times.
-* The details of the user are displayed at the end along with the quiz result.
+
+| ID | Description | Status |
+| --- | --- | --- |
+| 1 | User shall be asked to provide basic details like Name and Age. | Implemented |
+| 2 | If user is under 18(not an adult), he/she shall not be able to attempt the quiz. | Implemented |
+| 3 | User shall be able to choose a valid answer from the available options. | Implemented |
+| 4 | User shall be able to attempt multiple times. | Implemented |
+| 5 | The details of the user are displayed at the end along with the quiz result. | Implemented |
